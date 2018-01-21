@@ -5,8 +5,10 @@
   <!-- Sets variables which can later be used. -->
   <!--  The value of a prperty is accessed vi ${} -->
   <property name="src.dir" location="src" />
+  <echo>myProp is ${src.dir}</echo>
   <property name="build.dir" location="bin" />
   <property name="dist.dir" location="dist" />
+  <property name="docs.dir" location="docs" />
 
   <path id="class.path">
     <pathelement location="./bin/" />
@@ -27,15 +29,15 @@
   </target>
 
   <!-- creates the build, docs and dist directory -->
-  <target name="compile" depends="clean, makedir">>
+  <target name="compile" depends="clean, makedir">
     <javac srcdir="${src.dir}" destdir="${build.dir}">
       <classpath refid="class.path" />
     </javac>
   </target>
 
   <!-- creates deployable jar file -->
-  <target name="jar" depends="compile">>
-    <jar destfile="${dest.dir}\rectangle.jar" basedir="${build.dir}">
+  <target name="jar" depends="compile">
+    <jar destfile="${dist.dir}\rectangle.jar" basedir="${build.dir}">
       <manifest>
         <attribute name="Main-Class" value="Rectangulator" />
       </manifest>
@@ -43,6 +45,6 @@
   </target>
 
   <target name="main" depends="compile, jar">
-     <description=Main target</description>
+     <description>Main target</description>
   </target> 
 </project>
