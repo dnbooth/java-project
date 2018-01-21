@@ -3,7 +3,7 @@
   <property environment="env"/>
 
   <!-- Sets variables which can later be used. -->
-  <!--  The value of a prperty is accessed vi ${} -->
+  <!--  The value of a property is accessed vi ${} -->
   <property name="src.dir" location="src" />
   <echo>myProp is ${src.dir}</echo>
   <property name="build.dir" location="bin" />
