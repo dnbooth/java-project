@@ -15,12 +15,12 @@ public class RectangleTest {
   }
 
   @Test
-  public void testGetPerimeter() {
+  public void testGetLength() {
     assertEquals(myRectangle.length, 5);
   }
 
   @Test
-  public void testGetPerimeter() {
+  public void testGetWidth() {
     assertEquals(myRectangle.width, 6);
   }
 }
