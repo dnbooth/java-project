@@ -7,7 +7,7 @@ pipeline {
 
   stages {
     stage('Unit Tests') {
-      agent (
+      agent {
         label 'apache'
       }
       steps {
@@ -16,7 +16,7 @@ pipeline {
       }
     }
     stage('build') {
-      agent (
+      agent {
         label 'apache'
       }
       steps {
@@ -24,7 +24,7 @@ pipeline {
       }
     }
     stage('deploy') {
-      agent (
+      agent {
         label 'apache'
       }
       steps {
@@ -32,7 +32,7 @@ pipeline {
       }
     }
     stage('Running on apache') {
-      agent (
+      agent {
         label 'CentOS'
       }
       steps {
