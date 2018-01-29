@@ -17,7 +17,6 @@ pipeline {
         sayHello 'Awesome Student!'
       }
     }
-  stages {
     stage('Git Information') {
       agent any
 
